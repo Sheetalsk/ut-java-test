@@ -12,7 +12,7 @@ import java.nio.file.Paths;
 
 public class FileWriterTest {
 
-    private static final String FILE_PATH = "random_strings.txt";
+    private static final String FILE_PATH = "out.txt";
 
     @Test
     public void shouldCreateAFile() throws IOException {
