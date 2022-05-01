@@ -59,6 +59,4 @@ public class StringGeneratorTest {
         Assertions.assertEquals(outputString, "");
         Assertions.assertEquals(0, randomStrings.length);
     }
-
-
 }

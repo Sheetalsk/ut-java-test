@@ -2,9 +2,9 @@ import java.io.IOException;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class StringGenerator {
+public final class StringGenerator {
 
-    private void StringGenerator() {
+    private StringGenerator() {
     }
 
     public static void main(String[] args) throws IOException {
