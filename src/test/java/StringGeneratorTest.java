@@ -44,8 +44,8 @@ public class StringGeneratorTest {
         String firstLine = generatedStrings[0];
         String secondLine = generatedStrings[1];
 
-        Assertions.assertEquals(firstLine.length(), 100);
-        Assertions.assertEquals(secondLine.length(), 100);
+        Assertions.assertEquals(100,firstLine.length());
+        Assertions.assertEquals(100, secondLine.length());
     }
 
     @Test

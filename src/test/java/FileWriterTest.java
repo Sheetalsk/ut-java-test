@@ -52,7 +52,9 @@ public class FileWriterTest {
     @Test
     public void shouldNotCreateFileWithNullFilePath() throws IOException {
 
-        FileWriter.write(null, FILE_PATH);
+        byte[] input = new byte[]{'a', 'b', '\n', 'c', 'd', '\n'};
+
+        FileWriter.write(input, null);
 
         Path path = Paths.get(FILE_PATH);
         Assertions.assertEquals(true, Files.exists(path));

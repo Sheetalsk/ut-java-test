@@ -1,3 +1,4 @@
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.Arrays;
 import java.util.Scanner;
@@ -9,13 +10,18 @@ public final class StringGenerator {
 
     public static void main(String[] args) throws IOException {
         Scanner sc = new Scanner(System.in);
-        int n = sc.nextInt();
+        int x = sc.nextInt();
 
-        FileWriter.write(StringGenerator.generateRandomStrings(n), "out.txt");
+        FileWriter.write(generateRandomStrings(x), "out.txt");
     }
 
     public static byte[] generateRandomStrings(int times) {
-        byte[] c = new byte[(times * 101) - 1];
+
+        int length = (times * 101) - 1;
+        if (times == 0) {
+            length = 0;
+        }
+        byte[] c = new byte[length];
 
         Arrays.fill(c, (byte) 'z');
 
@@ -24,6 +30,7 @@ public final class StringGenerator {
         int insertCharIndex = 0;
         byte insertChar = 'a';
         int insertCharCount = 0;
+
         while (index < c.length) {
 
             if (index == insertCharIndex) {
