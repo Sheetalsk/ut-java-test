@@ -15,7 +15,8 @@ public final class StringGenerator {
     }
 
     public static byte[] generateRandomStrings(int times) {
-        byte[] c = new byte[times * 101];
+        byte[] c = new byte[(times * 101) - 1];
+
         Arrays.fill(c, (byte) 'z');
 
         int index = 0;
@@ -43,6 +44,7 @@ public final class StringGenerator {
             }
             index++;
         }
+
         return c;
     }
 }
